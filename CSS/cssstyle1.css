@@ -3,9 +3,77 @@ body{
     justify-content: center;
     align-items: center;
     display: flex;
-    
 }
 
-.choi{
+.container{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 30px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.people{
+    border: solid black;
+    height: 40px;
+    width: 150px;
+}
+.veicle{
+    border: solid black;    height: 40px;
+    width: 150px;
+}
+.planet{
+    border: solid black;
+    height: 40px;
+    width: 150px;
+}
+.proc{
+    border-radius: 10px;
+    margin: 30px;
+    border: solid black;
+    height: 40px;
+    width: 150px;
+}
+.container2{
+    flex-direction: row;
+}
+.result{
+    border: black solid 5px;
+    border-radius: 15px;
+    height: 500px;
+    width: 500px;
     background-color: white;
+}
+.logo{
+    margin: 30px;
+    height: 280px;
+    width: 350px;
+    border-radius: 30px;
+    background-color: white;
+}
+
+.inp{
+    margin: 10px;
+    width: 500px;
+    height: 40px;
+    border: black solid 5px;
+    border-radius: 10px;
+}
+.cont{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.people1{
+    border: solid black;
+    height: 40px;
+    width: 150px;
+    border-radius: 10px 10px 0px 0px;
+}
+.people2{
+    border-radius: 0px 0px 10px 10px;
+    border: solid black;
+    height: 40px;
+    width: 150px;
 }
