@@ -9,19 +9,20 @@ let request = new XMLHttpRequest();
     request.send();
     }
 
-    const btnPeople = document.getElementById("btnPeople")
+    const btnPeople = document.getElementById("teste");
 
     btnPeople.onclick = function (){
         callApi('people');
         request.onload = function(){
             const char = request.response
-            findChar(char)
+            prettyPrint(char)
             console.log(char)
+            //document.getElementById("result").innerText = JSON.stringify(char);
         }
     }
     
 
-    function findChar(jsonObj) {
+    function prettyPrint(jsonObj) {
       const char = jsonObj
       console.log(char.results)
 
@@ -33,16 +34,18 @@ let request = new XMLHttpRequest();
         // const photo = document.createElement('img')
         
 
-        myH2.textContent = 'Nome: ' + char.results[i];
+        myH2.textContent = 'Nome: ' + char.results[i].name;
         // myPara1.textContent = 'Preço: '+ casas[i].price
         // myPara2.textContent = 'Tipo: '+ casas[i].property_type
         // photo.src = casas[i].photo        
 
-        // myArticle.appendChild(myH2);
+         myArticle.appendChild(myH2);
         // myArticle.appendChild(myPara1);
         // myArticle.appendChild(myPara2);
         // myArticle.appendChild(photo)
         
-        body.appendChild(myArticle);
+        // body.appendChild(myArticle);
+
+        document.getElementById("result").appendChild(myArticle);
       }
     }
