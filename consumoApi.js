@@ -3,13 +3,27 @@ const body = document.querySelector('body');
 let requestURL = 'https://swapi.co/api';
 let request = new XMLHttpRequest();
     
+    var reqType;
     function callApi(type) {
-    request.open('GET', `${requestURL}/${type}/`);
+    reqType = type;
+    request.open('GET', `${requestURL}/${type}`);
     request.responseType = 'json';
     request.send();
+     
     }
 
     const btnPeople = document.getElementById("btnPeople")
+
+    const searchBtn = document.getElementById("searchBtn")
+
+    searchBtn.onclick = function(){
+      var value = document.getElementById('myInput').value
+      callApi(`people/?search=${value}`);
+        request.onload = function(){
+            const char = request.response
+            console.log(char)
+        }
+    }
 
     btnPeople.onclick = function (){
         callApi('people');
@@ -19,6 +33,11 @@ let request = new XMLHttpRequest();
             console.log(char)
         }
     }
+
+
+
+
+    
     
 
     function findChar(jsonObj) {
