@@ -6,6 +6,39 @@ body{
     
 }
 
-.choi{
+.container{
+    margin: 200px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.people{
+    border: solid black;
+    height: 40px;
+    width: 150px;
+}
+.veicle{
+    border: solid black;    height: 40px;
+    width: 150px;
+}
+.planet{
+    border: solid black;
+    height: 40px;
+    width: 150px;
+}
+.proc{
+    margin: 30px;
+    border: solid black;
+    height: 40px;
+    width: 150px;
+}
+.container2{
+    flex-direction: row;
+}
+.result{
+    height: 500px;
+    width: 500px;
     background-color: white;
 }
