@@ -1,0 +1,11 @@
+body{
+    background-color: #333333;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    
+}
+
+.choi{
+    background-color: white;
+}
